@@ -2,12 +2,15 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import HomePage from "./pages/homePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <div className="flex justify-center items-center min-h-screen">
+        <h1 className="text-4xl text-blue-600 font-bold">Recipe Book</h1>
+      </div>
+    ),
   },
 ]);
 
