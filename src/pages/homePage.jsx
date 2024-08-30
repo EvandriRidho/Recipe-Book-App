@@ -1,7 +1,9 @@
-import Nav from "../components/Fragments/Navbar";
-
-let HomePage = () => {
-  return <Nav />;
+const HomePage = () => {
+  return (
+    <div className="flex justify-center items-center min-h-screen">
+      <h1>Hello World</h1>
+    </div>
+  );
 };
 
 export default HomePage;
