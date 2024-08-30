@@ -3,15 +3,24 @@ import Button from "../components/Elements/Button/Button";
 import InputForm from "../components/Elements/InputForm/InputForm";
 import Checkbox from "../components/Elements/InputForm/checkbox";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div className="bg-gray-100 flex items-center justify-center min-h-screen">
       <div className="w-full max-w-md px-6 py-8 bg-white shadow-md rounded-lg">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Login
+          Register
         </h2>
 
         <form>
+          <InputForm
+            type="fullname"
+            id="fullname"
+            placeholder="Enter Your Fullname"
+            htmlFor="fullname"
+          >
+            Fullname
+          </InputForm>
+
           <InputForm
             type="email"
             id="email"
@@ -30,6 +39,15 @@ const LoginPage = () => {
             Password
           </InputForm>
 
+          <InputForm
+            type="confirmpassword"
+            id="confirmpassword"
+            placeholder="********"
+            htmlFor="confirmpassword"
+          >
+            Confirm Password
+          </InputForm>
+
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
               <Checkbox type="checkbox" id="remember" />
@@ -40,17 +58,14 @@ const LoginPage = () => {
                 Remember me
               </label>
             </div>
-            <Link href="#" className="text-sm text-indigo-600 hover:underline">
-              Forgot password?
-            </Link>
           </div>
-          <Button type="submit">Login</Button>
+          <Button type="submit">Register</Button>
         </form>
 
         <p className="mt-6 text-center text-sm text-gray-600">
-          Dont have an account?
-          <Link to={"/register"} className="text-indigo-600 hover:underline">
-            Sign up
+          have an account?
+          <Link to={"/login"} className="text-indigo-600 hover:underline">
+            Login
           </Link>
         </p>
       </div>
@@ -58,4 +73,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
